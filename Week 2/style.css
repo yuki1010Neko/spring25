@@ -1,0 +1,25 @@
+body{
+    text-align: center;
+}
+body{
+    text-align: center;
+    font-family: 'Arial';
+    color: rgb(60, 5, 5);
+    background-color: rgb(224, 224, 219);
+    font-style: italic;
+    font-weight: bold;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+.btn{
+    display: inline-block;
+    background-color: whitesmoke;
+    padding: 5px 10px;
+    border: 3px solid rgb(65, 2, 16);
+    border-radius: 10px;
+    font-size: 40px;
+    text-decoration: none;
+    color: rgb(60, 5, 5);
+}
