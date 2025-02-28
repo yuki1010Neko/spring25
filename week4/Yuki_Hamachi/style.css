@@ -1,0 +1,11 @@
+body {
+    background-color: rgb(149, 156, 223); /* 一時的に背景を赤くしてCSSが適用されているか確認 */
+    text-align: center;
+    font-size: 30px;
+    background-image: url('https://i.pinimg.com/originals/f2/a4/19/f2a419f787fde4ae01c36a7c338efa6b.gif');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    color: white;
+}
