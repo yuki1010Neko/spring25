@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     function addOneToCounter(event) {
         let counterElement = document.getElementById("counter");
-        counterElement.innerText = parseInt(counterElement.innerText) + 1;
+        counterElement.innerText = parseInt(counterElement.innerText) + 10000000000000000000;
        
        
        
