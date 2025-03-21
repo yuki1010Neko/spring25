@@ -18,17 +18,24 @@ app.get('/', function(req, res){
   res.sendFile(__dirname + '/index.html');
 });
 
-io.on('connection', function(socket){
+
+io.on('connection', async function(socket){
+  // 🔁 チャット履歴を送る
+  const messages = await messageModel.find();
+  socket.emit('chat history', messages);
+
+  // 💬 新しいチャットメッセージを受け取る
   socket.on('chat message', function(msg){
     const message = new messageModel();
     message.content = msg;
     message.save().then(m => {
       io.emit('chat message', msg);
-    })
+    });
   });
 });
 
 server.listen(3000, async function(){
-  await mongoose.connect("mongodb+srv://yuki1010:<db_password>@yuki.b9q3q.mongodb.net/?retryWrites=true&w=majority&appName=Yuki")
+  await mongoose.connect("mongodb+srv://sam:helloworld@cluster0.ytnrk.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
   console.log('listening on *:3000');
 });
+//mongodb+srv://yuki1010:<db_password>@yuki.b9q3q.mongodb.net/?retryWrites=true&w=majority&appName=Yuki
